@@ -1,0 +1,19 @@
+{
+  "onBoardingTitle1": "مرحبًا بك في علمني",
+  "onBoardingDescription1": "اكتشف عالمًا من المعرفة والتعلم بجاهزة مع 3almni. نحن هنا لنرشدك خلال رحلة تعليمية غنية",
+  "onBoardingTitle2": "مسارات التعلم الشخصية",
+  "onBoardingDescription2": "قم بتخصيص تجربتك التعليمية مع علمني. أنشئ مسارات تعلم مخصصة تتناسب مع اهتماماتك وأهدافك، مما يضمن تعليمًا فرديًا حقًا",
+  "onBoardingTitle3": "تعلم، تعاون، حقق",
+  "onBoardingDescription3": "انضم إلى مجتمع نشط من المتعلمين، تعاون مع الأقران، وافتح إمكانياتك الكاملة مع منصة التعلم الإلكتروني التفاعلية والمحفزة للإنجازات علمني",
+  "onBoardingButtonText": "التالي",
+  "onBoardingTextButtonText": "تخطي",
+  "loginScreenTitlePartOne": "تسجيل " ,
+  "loginScreenTitlePartTwo": "الدخول" ,
+  "loginScreenEmail": "البريد الإلكتروني",
+  "loginScreenPass": "كلمة المرور",
+  "loginScreenButton": "تسجيل الدخول",
+  "loginScreenHaveNotAccount": "ليس لديك حساب؟",
+  "loginScreenCreateAccount": "إنشاء حساب" ,
+  "loginScreenForgetPass" : "هل نسيت كلمة السر؟"
+
+}
