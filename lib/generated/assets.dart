@@ -9,5 +9,6 @@ class Assets {
       'assets/on_boarding/on_boarding2.svg';
   static const String onBoardingOnBoarding3 =
       'assets/on_boarding/on_boarding3.svg';
-  static const String productsSneaker = 'assets/products/sneaker.json';
+  static const String productsBrands = 'assets/products/brands.json';
+  static const String productsProducts = 'assets/products/products.json';
 }
