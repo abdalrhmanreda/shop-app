@@ -39,7 +39,11 @@ class HomeScreenBody extends StatelessWidget {
                     if (index == 1) {
                       return const Gap(20);
                     }
-                    return buildProductItem(context, index);
+                    return buildProductItem(
+                        context: context,
+                        index: index,
+                        list:
+                            AppCubit.get(context).allProductModel!.allProduct!);
                   },
                 ),
               ],

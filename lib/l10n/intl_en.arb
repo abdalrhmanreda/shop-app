@@ -21,5 +21,6 @@
   "registerScreenTitlePartTwo": " Up" ,
   "registerScreenHaveAccount" : "Already have an account ? " ,
   "registerScreenButton" : "Sign Up" ,
-  "registerScreenDescription": "Sign up now to receive a special discount on your first purchase"
+  "registerScreenDescription": "Sign up now to receive a special discount on your first purchase" ,
+  "search": "Search"
 }

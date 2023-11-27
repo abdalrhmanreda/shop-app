@@ -4,6 +4,7 @@ import 'package:shoes/ui/features/authentication/screens/register_screen/registe
 import 'package:shoes/ui/features/cart/screens/cart_screen.dart';
 import 'package:shoes/ui/features/favourite/screens/favourite_screen.dart';
 import 'package:shoes/ui/features/home/screens/home_screen.dart';
+import 'package:shoes/ui/features/search/screens/search_product_screen.dart';
 import 'package:shoes/ui/features/search/screens/search_screen.dart';
 import 'package:shoes/ui/features/settings/screens/settings_screen.dart';
 import 'package:shoes/ui/intro_screen/screens/on_boarding_screen.dart';
@@ -34,5 +35,7 @@ Route? generateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (_) => const SettingsScreen());
     case RoutePath.search:
       return MaterialPageRoute(builder: (_) => const SearchScreen());
+    case RoutePath.searchProduct:
+      return MaterialPageRoute(builder: (_) => const SearchProductScreen());
   }
 }

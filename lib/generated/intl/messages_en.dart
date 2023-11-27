@@ -59,6 +59,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Sign"),
         "registerScreenTitlePartTwo":
             MessageLookupByLibrary.simpleMessage(" Up"),
+        "search": MessageLookupByLibrary.simpleMessage("Search"),
         "username": MessageLookupByLibrary.simpleMessage("Username")
       };
 }

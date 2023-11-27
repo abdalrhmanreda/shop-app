@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 
 import '../../../../core/constant/app_constant.dart';
-import '../../../cubit/app_cubit.dart';
 
-Container buildProductItem(BuildContext context, int index) {
+Container buildProductItem(
+    {required BuildContext context,
+    required int index,
+    required List<dynamic> list}) {
   return Container(
     margin: const EdgeInsets.all(4),
     padding: const EdgeInsets.all(7),
@@ -25,12 +27,11 @@ Container buildProductItem(BuildContext context, int index) {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             CachedNetworkImage(
-              imageUrl:
-                  '${AppCubit.get(context).allProductModel!.allProduct![index].image}',
+              imageUrl: '${list[index].image}',
               errorWidget: (context, url, error) => const SizedBox(),
             ),
             Text(
-              '${AppCubit.get(context).allProductModel!.allProduct![index].name}',
+              '${list[index].name}',
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
             ),
@@ -38,13 +39,12 @@ Container buildProductItem(BuildContext context, int index) {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  '${AppCubit.get(context).allProductModel!.allProduct![index].initialPrice} \$' ??
-                      "150 \$",
+                  '${list[index].initialPrice} \$' ?? "150 \$",
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                 ),
                 Text(
-                  '${AppCubit.get(context).allProductModel!.allProduct![index].brand!.name}',
+                  '${list[index].brand!.name}',
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                 ),

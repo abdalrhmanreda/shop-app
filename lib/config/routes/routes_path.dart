@@ -9,4 +9,5 @@ class RoutePath {
   static const String cart = '/cartScreen';
   static const String settings = '/settingsScreen';
   static const String search = '/searchScreen';
+  static const String searchProduct = '/searchProductScreen';
 }

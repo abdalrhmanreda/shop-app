@@ -9,6 +9,7 @@ import 'package:shoes/ui/cubit/app_cubit.dart';
 import 'package:shoes/ui/cubit/observer/blocObserver.dart';
 import 'package:shoes/ui/features/authentication/controller/auth_cubit.dart';
 import 'package:shoes/ui/features/authentication/screens/login_screen/login_screen.dart';
+import 'package:shoes/ui/features/search/controllers/search_cubit.dart';
 import 'package:shoes/ui/intro_screen/screens/on_boarding_screen.dart';
 
 import 'config/routes/router.dart';
@@ -44,6 +45,7 @@ class SneakerApp extends StatelessWidget {
           providers: [
             BlocProvider(create: (context) => AppCubit()..getAllProducts()),
             BlocProvider(create: (context) => AuthCubit()),
+            BlocProvider(create: (context) => SearchCubit()..getAllBrands()),
           ],
           child: SafeArea(
             child: MaterialApp(
