@@ -4,6 +4,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
+import 'package:shoes/core/api/api_constant.dart';
+import 'package:shoes/core/api/dio_helper.dart';
 import 'package:shoes/generated/assets.dart';
 import 'package:shoes/ui/features/cart/screens/cart_screen.dart';
 import 'package:shoes/ui/features/favourite/screens/favourite_screen.dart';
@@ -40,9 +42,24 @@ class AppCubit extends Cubit<AppStates> {
     emit(LoadingState());
     rootBundle.loadString(Assets.productsProducts).then((value) {
       allProductModel = AllProductModel.fromJson(jsonDecode(value));
+      print(allProductModel!.data!.length);
       emit(GetHomeProductsSuccessState());
     }).catchError((error) {
       debugPrint(error.toString());
+      emit(FailureState(error: error.toString()));
+    });
+  }
+
+  void getProductDetails({required String id}) {
+    emit(LoadingState());
+    DioHelper.getData(url: ApiConstant.productDetails, query: {
+      "id": id,
+    })!
+        .then((value) {
+      print(value);
+      emit(GetHProductDetailsSuccessState());
+    }).catchError((error) {
+      print(error.toString());
       emit(FailureState(error: error.toString()));
     });
   }

@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:shoes/core/api/api_constant.dart';
 
 class DioHelper {
   static late Dio dio;
@@ -7,7 +8,7 @@ class DioHelper {
   static init() {
     dio = Dio(
       BaseOptions(
-        baseUrl: 'https://api.themoviedb.org/3/',
+        baseUrl: ApiConstant.baseUrl,
         receiveDataWhenStatusError: true,
       ),
     );

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:shoes/core/methods/pass_validate/pass_validate.dart';
+import 'package:shoes/core/methods/validate_email/vaildate_email.dart';
 
 import '../../../../../../core/components/custom_text_form_feild.dart';
 
@@ -40,6 +42,8 @@ class CustomTwoTextFromField extends StatelessWidget {
           validate: (value) {
             if (value!.isEmpty) {
               return "should enter $label2";
+            } else if (!isEmailValid(value)) {
+              return 'email must contain @ & .com';
             } else {
               return null;
             }
@@ -57,6 +61,8 @@ class CustomTwoTextFromField extends StatelessWidget {
           validate: (value) {
             if (value!.isEmpty) {
               return "should enter $label2";
+            } else if (!isPasswordValid(value)) {
+              return 'Password must include: 0-9, A-Z, a-z, and special characters';
             } else {
               return null;
             }

@@ -1,9 +1,10 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hive_flutter/adapters.dart';
-import 'package:shoes/config/routes/routes_path.dart';
+import 'package:shoes/core/api/dio_helper.dart';
 import 'package:shoes/core/cache/hive_cache.dart';
 import 'package:shoes/ui/cubit/app_cubit.dart';
 import 'package:shoes/ui/cubit/observer/blocObserver.dart';
@@ -14,13 +15,18 @@ import 'package:shoes/ui/intro_screen/screens/on_boarding_screen.dart';
 
 import 'config/routes/router.dart';
 import 'config/themes/themes.dart';
+import 'firebase_options.dart';
 import 'generated/l10n.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   Bloc.observer = MyBlocObserver();
   await Hive.initFlutter();
   await HiveCache.openHive();
+  DioHelper.init();
   bool onBoarding = HiveCache.getData(key: 'onBoarding');
   Widget widget;
   onBoarding ? widget = const LoginScreen() : widget = const OnBoardingScreen();
@@ -49,8 +55,8 @@ class SneakerApp extends StatelessWidget {
           ],
           child: SafeArea(
             child: MaterialApp(
-              home: startWidget,
-              initialRoute: RoutePath.layout,
+              home: LoginScreen(),
+              // initialRoute: RoutePath.login,
               onGenerateRoute: generateRoute,
               locale: const Locale('en', 'US'),
               localizationsDelegates: const [

@@ -5,6 +5,7 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:gap/gap.dart';
 import 'package:shoes/core/components/progress_indector.dart';
 import 'package:shoes/ui/cubit/app_cubit.dart';
+import 'package:shoes/ui/features/home/components/brands.dart';
 
 import 'build_poster.dart';
 import 'build_product_item.dart';
@@ -26,6 +27,7 @@ class HomeScreenBody extends StatelessWidget {
             child: Column(
               children: [
                 buildPoster(context),
+                const BrandsList(),
                 const Gap(5),
                 MasonryGridView.count(
                   crossAxisCount: 2,
@@ -34,7 +36,7 @@ class HomeScreenBody extends StatelessWidget {
                   mainAxisSpacing: 4,
                   crossAxisSpacing: 4,
                   itemCount:
-                      AppCubit.get(context).allProductModel!.allProduct!.length,
+                      AppCubit.get(context).allProductModel!.data!.length,
                   itemBuilder: (context, index) {
                     if (index == 1) {
                       return const Gap(20);
@@ -42,8 +44,7 @@ class HomeScreenBody extends StatelessWidget {
                     return buildProductItem(
                         context: context,
                         index: index,
-                        list:
-                            AppCubit.get(context).allProductModel!.allProduct!);
+                        list: AppCubit.get(context).allProductModel!.data!);
                   },
                 ),
               ],

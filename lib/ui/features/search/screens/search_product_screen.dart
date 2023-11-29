@@ -7,8 +7,9 @@ class SearchProductScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: SearchProductScreenBody(),
+    return Scaffold(
+      appBar: AppBar(),
+      body: const SearchProductScreenBody(),
     );
   }
 }

@@ -2,6 +2,15 @@
 class Assets {
   Assets._();
 
+  static const String brandsAdidas = 'assets/brands/adidas.png';
+  static const String brandsConverse = 'assets/brands/converse.png';
+  static const String brandsCrocs = 'assets/brands/crocs.png';
+  static const String brandsJorden = 'assets/brands/jorden.png';
+  static const String brandsNike = 'assets/brands/nike.png';
+  static const String brandsPuma = 'assets/brands/puma.png';
+  static const String brandsSupereme = 'assets/brands/supereme.png';
+  static const String brandsVans = 'assets/brands/vans.png';
+  static const String brandsYeezy = 'assets/brands/Yeezy.png';
   static const String logoLogo = 'assets/logo/logo.svg';
   static const String onBoardingOnBoarding1 =
       'assets/on_boarding/on_boarding1.svg';

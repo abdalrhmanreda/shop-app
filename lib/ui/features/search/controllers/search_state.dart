@@ -10,3 +10,5 @@ class LoadingState extends SearchStates {}
 class FailureState extends SearchStates {}
 
 class GetAllBrandsSuccessState extends SearchStates {}
+
+class SearchSuccessState extends SearchStates {}

@@ -16,3 +16,5 @@ class FailureState extends AppStates {
 }
 
 class GetHomeProductsSuccessState extends AppStates {}
+
+class GetHProductDetailsSuccessState extends AppStates {}

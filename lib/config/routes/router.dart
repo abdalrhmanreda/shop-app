@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shoes/config/routes/routes_path.dart';
 import 'package:shoes/ui/features/authentication/screens/register_screen/register_screen.dart';
 import 'package:shoes/ui/features/cart/screens/cart_screen.dart';
+import 'package:shoes/ui/features/category/screens/category_screen.dart';
 import 'package:shoes/ui/features/favourite/screens/favourite_screen.dart';
 import 'package:shoes/ui/features/home/screens/home_screen.dart';
 import 'package:shoes/ui/features/search/screens/search_product_screen.dart';
@@ -37,5 +38,9 @@ Route? generateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (_) => const SearchScreen());
     case RoutePath.searchProduct:
       return MaterialPageRoute(builder: (_) => const SearchProductScreen());
+    case RoutePath.category:
+      return MaterialPageRoute(builder: (_) => const CategoryScreen());
+    case RoutePath.sneakerDetails:
+      return MaterialPageRoute(builder: (_) => const CategoryScreen());
   }
 }
